@@ -1,6 +1,7 @@
 "Public API re-exports"
 
 load("//distroless/private:cacerts.bzl", _cacerts = "cacerts")
+load("//distroless/private:file_capabilities.bzl", _file_capabilities = "file_capabilities")
 load("//distroless/private:flatten.bzl", _flatten = "flatten")
 load("//distroless/private:group.bzl", _group = "group")
 load("//distroless/private:home.bzl", _home = "home")
@@ -17,3 +18,5 @@ passwd = _passwd
 java_keystore = _java_keystore
 home = _home
 flatten = _flatten
+
+file_capabilities = _file_capabilities
