@@ -3,6 +3,7 @@ load("@rules_java//java:defs.bzl", "java_binary")
 
 exports_files([
     "cacerts.sh",
+    "file_capabilities.sh",
     "locale.sh",
     "flatten.sh",
 ])
@@ -110,4 +111,11 @@ bzl_library(
     name = "util",
     srcs = ["util.bzl"],
     visibility = ["//distroless:__subpackages__"],
+)
+
+bzl_library(
+    name = "file_capabilities",
+    srcs = ["file_capabilities.bzl"],
+    visibility = ["//distroless:__subpackages__"],
+    deps = [":tar"],
 )
